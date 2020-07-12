@@ -1,0 +1,104 @@
+Desafío 1: Determinantes del ingreso
+
+Enunciado
+Usted trabaja para un organismo no gubernamental que está interesado en las dinámicas
+socioeconómicas que determinan la desigualdad de ingreso y la erradicación de la pobreza extrema,
+enmarcado dentro de los objetivos del desarrollo del nuevo milenio del Programa de las Naciones
+Unidas para el Desarrollo. Le encomiendan el desarrollo de un modelo predictivo sobre la
+probabilidad que un individuo presente salarios por sobre o bajo los 50.000 dólares anuales, en base
+a una serie de atributos sociodemográficos.
+
+Preliminares:
+------------------------------------------------------------------------------------------------------------
+* Descripcion del problema:
+* Objetivo del problema:
+* ¿Que solucion vamos a implementar (regresión o clasificación)? (Considerar criterios de optimización y métricas de desempeño)
+Utilizaremos algoritmos de machine learning de clasificacion con probabilidades (Regresion logistica, LogisticRegression).
+Vamos a clasificar el problema con dos posibles “clases”, intentaremos responder la pregunta:
+¿El individuo tiene un salario sobre 50.000 dolara anuales ? [sí, no]
+Deseamos saber si un individuo tiene un salario sobre o bajo los 50.000 dolares anuales.
+Aplicaremos la funcion logistica o tambien llamada sigmoide para obtener la probabilidad
+Nuestro resultado estara acotado a 0 y 1. Su valor minimo es 0 y el maximo es 1.
+Podremos interpretar sus resultados como probabilidades (por ejemplo , una probabilidad de 0.90 de que 
+el individuo tenga un salario sobre los 50.000 dolares anuales.
+Si la salida de la función Sigmoide es mayor que 0.5, podemos clasificar el resultado como 1 o SI, y si es menor que 0.5 podemos clasificarlo como 0 o NO
+Por su parte si el resultado es 0.75, podemos decir en términos de probabilidad como, hay un 75% de probabilidades de que el paciente sufra cáncer.
+aplicamos la función Sigmoide en la Regresión Lineal
+Regresión Logística Binaria: la variable objetivo tiene solo dos resultados posible, Llueve o NO Llueve, Sube o Baja
+el problema es una clasificación binaria en que la que tenemos que predecir si la salida pertenece a la clase 1 (sí) o clase 2 (no).
+Los algoritmos de clasificación se usan cuando el resultado deseado es una etiqueta discreta, en otras palabras, son útiles cuando la respuesta al problema cae dentro de un conjunto finito de resultados posibles.
+En el caso de que el modelo entrenado es para predecir cualquiera de las dos clases objetivos, verdadero o falso, por ejemplo, se le conoce como clasificación binaria. Algunos ejemplos de esto son: predecir si un alumno aprobará o no, predecir si un cliente comprará un producto nuevo o no.
+Para este caso vamos a utilizar regresion logistica (algoritmo supervisado), de esta manera podresm
+clasificar con probabilidades
+Para este caso vamos a utilizar el algoritmo de machine learning de clasificacion con probabilidades ()
+
+¿El individuo tendra un salario sobre 50.000 dolara anuales ? [sí, no]   LigicRegreson 
+Queremos usar Clasificación - Precisión como métrica para medir el rendimiento.
+
+Descripcion:
+------------------------------------------------------------------------------------------------------------
+* ¿Que librerías y módulos vamos a implementar? (librerías asociadas para la ingesta, preprocesamiento, visualización y modelación, así como métricas de evaluación)
+    
+Esta demostración utiliza las bibliotecas scikit-learn, pandas, numpy y matplotlib. 
+Los algoritmos utilizados en el modelo fueron K vecinos más cercanos, árbol de decisiones, XGBoost y CatBoost.
+
+* ¿Que funciones vamos a utilizar?  ¿Cual es el objetivo de cada funcion que vamos a utilizar? (Se debe detallar y considerar el proceso de preprocesamiento y recodificación de datos)
+
+
+Desafío 2: Rendimiento escolar
+
+Enunciado
+Lo contactan de una escuela Portuguesa para generar un modelo que identifique aquellos alumnos
+que presentan un bajo desempeño académico, medido en el promedio final del año escolar. Para ello
+le envían un archivo con registros sociodemográficos y conductuales de los alumnos dos escuelas
+para perfilar a los estudiantes.
+De manera adicional la psicopedagoga sugiere inspeccionar una batería de preguntas asociadas a
+aspectos ambientales del alumno (de famrel a health ) y ver si éstas se pueden abstraer en
+categorías latentes.
+
+Porcentaje de personas con fracaso que aprobaron el curso
+Regresion lineal 
+
+Preliminares:
+------------------------------------------------------------------------------------------------------------
+* Descripcion del problema:
+* Objetivo del problema:
+* ¿Que solucion vamos a implementar (regresión o clasificación)? (Considerar criterios de optimización y métricas de desempeño)
+
+
+Descripcion:
+------------------------------------------------------------------------------------------------------------
+* ¿Que librerías y módulos vamos a implementar? (librerías asociadas para la ingesta, preprocesamiento, visualización y modelación, así como métricas de evaluación)
+
+Further Reading/Resources¶
+Dataset used for this tutorial
+Package Management Systems for Installing
+Anaconda
+pip
+Visual/Exploratory Data Analysis Libraries
+Seaborn
+matplotlib
+Data Storage/Manipulation
+pandas
+Machine Learning
+sklearn
+Other Data-Processing/Analysis:
+NumPy
+SciPy
+
+* ¿Que funciones vamos a utilizar?  ¿Cual es el objetivo de cada funcion que vamos a utilizar? (Se debe detallar y considerar el proceso de preprocesamiento y recodificación de datos)
+
+
+http://rstudio-pubs-static.s3.amazonaws.com/9887_8b855280e96f480bbd8908b87e203441.html
+
+
+Prueba - Hito 2
+Detallar y considerar el proceso de preprocesamiento y recodificación de datos
+Elementos a considerar
+
+La inspección visual del vector objetivo. (2 puntos)
+La inspección visual de las variables. (2 puntos)
+La inspección de datos perdidos en las variables. (1 punto)
+
+
+@canal Hola chic@s, como les comenté hace un rato, vamos a poner una fecha límite de entrega de todos los desafíos atrasados para que no se junte todo los dias finales del módulo. Se pueden entregar los desafíos atrasados HASTA el día jueves 16 de julio a las 12 de la noche.Además, puesto que la próxima semana no tenemos clases, la entrega final de la prueba quedará para el dia Jueves 23 de julio a las 12 de la noche. No se aceptarán trabajos más alla de esa fecha/hora.Finalmente, aunque no tengas clases la próxima semana de todas formas pueden hablarme a mi o a @Álvaro Fuentes d'Alençon para hacernos consultas.
