@@ -72,23 +72,27 @@ def get_var_categoricas_numericas(df):
             numerica.append(i)
     return numerica, categorica
 
-def get_var_categoricas_vector_objetivo(df, var_categoricas, vector_objetivo):
+def inspeccionar_vector_objetivo(df, variables, vector_objetivo, tipo='countplot'):
     """
-    get_var_categoricas_vector_objetivo:
-        Función que permite visualizar gráficamente las variables categóricas con el vector objetivo
+    inspeccionar_vector_objetivo:
+        Función que permite visualizar gráficamente las variables con el vector objetivo
     parameters:
         df: objeto tipo DataFrame
-        var_categoricas: vector con el nombre de las variables categóricas
+        variables: vector con el nombre de las variables
         var_objetivo: nombre del vector objetivo
+        tipo: tipo de grafico (countplot o boxplot)
     returns:
-        Información visual de las variables categóricas con el vector objetivo (Grafico)
+        Información visual de las variables con el vector objetivo
     """
-    cant_var_categoricas = len(var_categoricas)
+    cant_variables = len(variables)
     columnas = 2
     contador = 1
-    for variable in var_categoricas:
-        plt.subplot((cant_var_categoricas/2) + 1, columnas, contador)
-        sns.countplot(variable, hue=vector_objetivo, data=df)
-        contador = contador + 1
+    for variable in variables:
+        if variable != vector_objetivo:
+            plt.subplot((cant_variables/2) + 1, columnas, contador)
+            if tipo == 'boxplot':
+                sns.boxplot(y=variable,x=vector_objetivo, data=df)
+            if tipo == 'countplot':
+                sns.countplot(variable, hue=vector_objetivo, data=df)
+            contador = contador + 1
     plt.tight_layout()
-
