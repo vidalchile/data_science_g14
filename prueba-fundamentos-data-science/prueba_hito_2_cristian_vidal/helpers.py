@@ -12,20 +12,6 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-
-def obtener_porcentaje_datos_perdidos(df, variables):
-    """
-    obtener_porcentaje_datos_perdidos:
-        función que permite obtener el porcentaje de valores perdidos de una variable
-    parameters:
-        df: objeto tipo DataFrame
-        variables: vector con los nombre de las variables a examinar
-    returns:
-        nombre de la variable y su porcentaje de valores vacios
-    """
-    for colname, serie in df.iteritems():
-         if colname in variables:
-            print(colname, serie.isna().value_counts('%')[1].round(3))
             
 def explorar_variables(df):
     """
